@@ -541,8 +541,8 @@ module ThinkingSphinx
         class_crc = object.class.to_crc32 if Riddle.loaded_version.to_i < 2
 
         match[:attributes]['sphinx_internal_id'] == object.
-          primary_key_for_sphinx &&
-        match[:attributes][crc_attribute] == class_crc
+          primary_key_for_sphinx# &&
+        #match[:attributes][crc_attribute] == class_crc
       }
     end
 
